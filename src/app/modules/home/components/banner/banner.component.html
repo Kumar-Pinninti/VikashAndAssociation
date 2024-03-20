@@ -1,0 +1,42 @@
+<section class="banner-container">
+  <div class="left-side-logo">
+    <h2>Logo</h2>
+    <div class="social-links">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <div class="right-side-carousel">
+    <div class="carousel-container">
+      <div
+        *ngFor="let item of carouselItems; let i = index"
+        class="carousel-slide"
+        [ngClass]="{ active: currentIndex === i }"
+      >
+        <img class="carousel-image" [src]="item.image" alt="Carousel Image" />
+        <div class="container">
+          <div class="carousel-content">
+            <h1>{{ item.title }}</h1>
+            <p>{{ item.description }}</p>
+            <button class="btn btn-outline-light btn-hover-effect">
+              <a href="#">
+                <span>
+                  {{ item.buttonText }}
+                </span>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-buttons">
+      <i class="fas fa-chevron-left carousel-arrows" (click)="prev()"></i>
+      <i class="fas fa-chevron-right carousel-arrows" (click)="next()"></i>
+    </div>
+  </div>
+</section>
+
+<!-- carousel -->

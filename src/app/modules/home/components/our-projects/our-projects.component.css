@@ -1,0 +1,43 @@
+.project-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-image {
+    width: 450px;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-image:hover {
+    transition: all 1s ease;
+    transform: scale(1.05, 1.05);
+    filter: brightness(70%);
+}
+
+.project-content {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.project-image:hover .project-content {
+    position: absolute;
+    bottom: 30px;
+    transition: all 1s ease;
+}
+
+.redirecting-arrow {
+    display: none;
+}
+
+.project-image:hover .redirecting-arrow {
+    display: block;
+}

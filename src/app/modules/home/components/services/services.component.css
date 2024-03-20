@@ -1,0 +1,117 @@
+/* about us */
+.about-container {
+  display: flex;
+  gap: 10px;
+}
+
+.about-content {
+  width: 50%;
+}
+
+.about-image {
+  width: 50%;
+  height: 250px;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(0.95);
+}
+
+.about-image-toast {
+  position: absolute;
+  bottom: -50px;
+  right: 30px;
+  padding: 20px 15px;
+  color: #fff;
+  width: 250px;
+  height: fit-content;
+  background-color: #323232;
+}
+/* about us  ends*/
+
+
+/* our services styling */
+
+.section-container {
+  display: flex;
+}
+
+.section-card {
+  padding: 60px 30px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 33.33%;
+}
+
+.section-card:hover {
+  background-color: rgba(247, 240, 240, 0.1);
+}
+
+.section-card .line {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.section-card .line:after {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 50px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  content: "";
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+.section-card:hover .line:after {
+  width: 100%;
+}
+
+.section-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+span,
+a,
+a:hover {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.right-side-number {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  line-height: 1em;
+}
+
+.section-card:hover .right-side-number {
+  -webkit-text-stroke: 1px rgba(166, 17, 17, .8);
+}

@@ -1,0 +1,91 @@
+<header [ngClass]="{'sticky': isSticky}">
+  <div class="container">
+    Logo
+  </div>
+</header>
+
+
+
+
+
+<div class="burger-wrap">
+  <i
+    class="fas menu-icon"
+    [ngClass]="{ 'fa-bars': !isSideNavOpen, 'fa-times': isSideNavOpen }"
+    (click)="toggleSideNav()"
+  ></i>
+</div>
+
+<div class="side-panel" [ngStyle]="{ right: isSideNavOpen ? '0' : '-350px' }">
+  <nav class="nav-bar">
+    <ul class="nav-bar-list">
+      <li class="nav-bar-items" *ngFor="let link of links">
+        <a
+          [routerLink]="link.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeSideNav()"
+          >{{ link.name }}</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+
+<!-- footer -->
+
+<footer>
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h6>Phone</h6>
+          <p>
+            <a href="tel:+91 7894561230">+91 7894561230</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h6>Email</h6>
+          <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
+        </div>
+        <div class="col-md-4">
+          <h6>Our Address</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            autem, odio excepturi quisquam
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="text-left copyright_text">
+            <p style="font-size: 14px">
+              © Copyright 2024 VAA Designed By
+              <a href="#" target="_blank" rel="noopener">VIKASH</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-icon">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="right">
+            <a href="#" target="_self">Terms &amp; Conditions</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
