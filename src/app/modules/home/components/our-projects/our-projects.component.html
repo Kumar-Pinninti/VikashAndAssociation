@@ -8,35 +8,37 @@
 
   <div class="project-container">
     <div class="project-wrapper">
-      <div class="project-image">
-        <img
-          src="https://w0.peakpx.com/wallpaper/453/731/HD-wallpaper-premium-international-group-of-happy-young-students.jpg"
-          alt="group-image"
-        />
-
-        <div class="project-content">
-            <h5>some project name</h5>
-            <div class="line"></div>
-            <div class="redirecting-arrow">
+      <div
+        class="project-slides"
+        *ngFor="let slide of slides; let i = index"
+        [ngClass]="{ active: slide.active }"
+      >
+        <div class="project-slide">
+          <div
+            class="project-image"
+            *ngFor="let project of slide.pair"
+            (mouseenter)="stopSlideInterval()"
+            (mouseleave)="startSlideInterval()"
+          >
+            <img [src]="project.imageUrl" [alt]="project.title" />
+            <div class="project-content">
+              <h5>{{ project.title }}</h5>
+              <div class="line"></div>
+              <div class="redirecting-arrow">
                 <i class="fas fa-arrow-right"></i>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-
-      <div class="project-image">
-        <img
-          src="https://w0.peakpx.com/wallpaper/453/731/HD-wallpaper-premium-international-group-of-happy-young-students.jpg"
-          alt="group-image"
-        />
-
-        <div class="project-content">
-            <h5>some project name</h5>
-            <div class="line"></div>
-            <div class="redirecting-arrow">
-                <i class="fas fa-arrow-right"></i>
-            </div>
-        </div>
-      </div>
+    </div>
+    <div class="project-carousel-dots">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        class="project-carousel-dot"
+        [ngClass]="{ active: slide.active }"
+        (click)="selectSlide(i)"
+      ></span>
     </div>
   </div>
 </section>
