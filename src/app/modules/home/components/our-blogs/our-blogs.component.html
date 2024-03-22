@@ -1,0 +1,20 @@
+<section>
+    <div class="section-heading">
+      <h2 class="section-title">
+        Blog
+        <span class="span-text-color">& News</span>
+      </h2>
+    </div>
+  
+    <div class="our-blogs-container">
+      <div class="our-blogs-wrapper">
+            <div class="our-blogs-image" *ngFor="let blogs of blogsList">
+              <img [src]="blogs.imageUrl" [alt]="blogs.title" />
+              <div class="our-blogs-content">
+                <h6>Blog - {{ blogs.date }}</h6>
+                <h5>{{ blogs.title }}</h5>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>

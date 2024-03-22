@@ -105,20 +105,40 @@ h1 {
   letter-spacing: 15px;
 }
 
-.btn-hover-effect {
-  padding: 12px 20px;
+.btn-hover {
+  position: relative;
 }
 
-.btn-hover-effect a span {
-  position: relative;
-  z-index: 2;
+.btn-hover-effect {
+  padding: 12px 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+
+.btn-hover-effect::before {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 800ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn-hover-effect:hover::before,
+.btn-hover-effect:focus::before {
+  transform: scaleX(1);
 }
 
 .btn-hover-effect a {
   font-weight: 300;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  background: transparent;
   color: #fff;
   margin: 0;
   position: relative;
@@ -129,7 +149,6 @@ h1 {
 
 .btn-hover-effect:hover a,
 .btn-hover-effect:focus a {
-  background: #fff;
   color: inherit;
 }
 

@@ -1,12 +1,6 @@
-<header [ngClass]="{'sticky': isSticky}">
-  <div class="container">
-    Logo
-  </div>
+<header [ngClass]="{ sticky: isSticky }">
+  <div class="container">Logo</div>
 </header>
-
-
-
-
 
 <div class="burger-wrap">
   <i
@@ -34,6 +28,30 @@
 
 <router-outlet></router-outlet>
 
+<section class="parallel-image-container">
+  <div class="image-wrapper">
+    <div class="video-wrapper">
+      <div class="video-icon">
+        <i class="fas fa-play"></i>
+      </div>
+      <div class="video-text">View Video</div>
+    </div>
+
+    <div class="client-reviews-wrapper">
+      <h3>Client Reviews</h3>
+    </div>
+
+    <div class="client-wrapper">
+      <div class="client-images-wrapper">
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+        <span>1</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- footer -->
 
