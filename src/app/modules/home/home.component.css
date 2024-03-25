@@ -1,5 +1,9 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.gap-between-elements {
+  margin-bottom: 50px;
 }

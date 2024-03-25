@@ -31,7 +31,7 @@
   transform: translateX(-50%);
   width: 2px;
   height: 70px;
-  background-color: rgba(256, 256, 256, 0.1);
+  background: var(--text-color-secondary);
 }
 
 .social-links a {
@@ -40,8 +40,8 @@
   line-height: 40px;
   text-align: center;
   font-size: 12px;
-  border: 1px solid #373737;
-  color: #999;
+  border: 1px solid var(--text-color-secondary);
+  color: var(--text-color-secondary);
   border-radius: 100%;
   margin-right: 3px;
   -webkit-transition: all 0.4s;
@@ -50,6 +50,7 @@
 }
 
 .social-links a:hover {
+  background: var(--background-color-2);
   border: 1px solid #b19777;
   color: #b19777;
 }
@@ -91,18 +92,24 @@
   transform: translateY(-50%);
 }
 
-h1 {
-  position: relative;
-  margin-bottom: 20px;
-  font-family: "Oswald", sans-serif;
-  font-size: 48px;
+.carousel-title {
+  color: var(--text-color-primary);
   text-transform: uppercase;
-  line-height: 1.35em;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  color: #fff;
+  position: relative;
+  font-size: var(--header-font);
   font-weight: 400;
-  letter-spacing: 15px;
+  line-height: 1.35em;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+.carousel-description {
+  font-size: var(--para-font);
+  line-height: 1.75em;
+  margin-bottom: 0;
+  color: var(--text-color-primary);
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .btn-hover {
@@ -111,14 +118,14 @@ h1 {
 
 .btn-hover-effect {
   padding: 12px 20px;
-  background-color: transparent;
-  border: 1px solid #fff;
+  background: transparent;
+  border: 1px solid var(--text-color-primary);
   z-index: 1;
 }
 
 .btn-hover-effect::before {
-  background-color: #fff;
-  content: '';
+  background: var(--text-color-primary);
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -137,9 +144,8 @@ h1 {
 
 .btn-hover-effect a {
   font-weight: 300;
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text-color-primary);
   margin: 0;
   position: relative;
   font-size: 16px;
@@ -161,17 +167,16 @@ h1 {
 .carousel-arrows {
   width: 2rem;
   height: 2rem;
-  background-color: transparent;
-  color: #fff;
+  background: transparent;
+  color: var(--text-color-primary);
   border-radius: 100%;
-  border: 1px solid rgb(256, 256, 256);
+  border: 1px solid var(--text-color-primary);
   cursor: pointer;
   z-index: 10;
   line-height: 2rem;
   text-align: center;
   margin-right: 5px;
 }
-
 
 @media screen and (max-width: 973px) {
   .left-side-logo {
@@ -180,5 +185,9 @@ h1 {
 
   .right-side-carousel {
     width: 100%;
+  }
+
+  .carousel-content {
+    width: 90%;
   }
 }

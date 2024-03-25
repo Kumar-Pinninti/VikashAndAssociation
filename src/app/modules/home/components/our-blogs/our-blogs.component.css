@@ -32,13 +32,13 @@
 .our-blogs-content {
   width: 500px;
   height: 100px;
-  background: #323232;
-  color: #fff;
+  background: var(--background-color-2);
+  color: var(--text-color-primary);
   position: absolute;
   bottom: -55px;
   left: 12px;
   padding: 0 30px;
-  border: 1px solid #323232;
+  border: 1px solid var(--background-color-2);
   display: flex;
   flex-direction: column;
   justify-content: center;

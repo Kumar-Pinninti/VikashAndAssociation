@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-our-blogs',
   templateUrl: './our-blogs.component.html',
-  styleUrls: ['./our-blogs.component.css']
+  styleUrls: ['./our-blogs.component.css'],
 })
 export class OurBlogsComponent implements OnInit {
-
   blogsList = [
     {
       title: 'Title 1',
@@ -18,12 +17,11 @@ export class OurBlogsComponent implements OnInit {
       date: 'Mar 21, 2024',
       imageUrl: 'https://wallpapercave.com/wp/wp2003540.jpg',
     },
-  ]
+  ];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.blogsList;
   }
-
 }

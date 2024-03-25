@@ -1,0 +1,62 @@
+/* variables css */
+
+:root {
+  /* font variables */
+  --header-font: 3rem;
+  --para-font: 1.1rem;
+  --font-semi: 600;
+  
+  /* colors */
+  
+  --background-color: #0a182e;
+  --background-color-2: #020d1c;
+  
+  /* --background-color: #272727;
+  --background-color-2: #323232; */
+  
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #999;
+  
+  --special-color: #b19777;
+  
+  /* fonts */
+  
+  --body-font: monospace;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  
+  /* margenes */
+  
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  
+  /* z-indexes */
+  
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* box shadows */
+  --bs-primary: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  --bs-secondary: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+      --header-font: 2.5rem;
+      --para-font: .8rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+    --header-font: 1.8rem;
+    --para-font: .6rem;
+  }
+}

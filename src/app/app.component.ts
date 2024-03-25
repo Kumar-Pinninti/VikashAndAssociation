@@ -10,12 +10,12 @@ export class AppComponent {
 
   // sticky scroll script
   isSticky: boolean = false;
-  
+
   @HostListener('window:scroll', ['$event'])
   onScroll(event: any) {
     this.isSticky = window.pageYOffset > 300;
   }
-  
+
   // side panel script
   isSideNavOpen: boolean = false;
 

@@ -25,17 +25,16 @@
 }
 
 .about-image-toast {
+  background: var(--background-color-2);
+  color: var(--text-color-primary);
+  height: fit-content;
+  width: 250px;
   position: absolute;
   bottom: -50px;
   right: 30px;
   padding: 20px 15px;
-  color: #fff;
-  width: 250px;
-  height: fit-content;
-  background-color: #323232;
 }
 /* about us  ends*/
-
 
 /* our services styling */
 
@@ -62,16 +61,14 @@
 }
 
 .section-card .line:after {
+  content: "";
+  background: var(--special-color);
+  width: 50px;
+  height: 1px;
   position: absolute;
   left: 0;
   bottom: 10px;
-  width: 50px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  content: "";
-  transition-property: all;
-  transition-duration: 0.8s;
-  transition-timing-function: ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .section-card:hover .line:after {
@@ -95,7 +92,7 @@ h5 {
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--text-color-primary);
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -103,15 +100,14 @@ h5 {
 .right-side-number {
   font-size: 40px;
   font-weight: 600;
-  font-family: "Oswald", sans-serif;
   position: absolute;
   bottom: 20px;
   right: 25px;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1px var(--text-color-secondary);
   line-height: 1em;
 }
 
 .section-card:hover .right-side-number {
-  -webkit-text-stroke: 1px rgba(166, 17, 17, .8);
+  -webkit-text-stroke: 1px var(--special-color);
 }
