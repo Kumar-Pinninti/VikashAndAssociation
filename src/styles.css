@@ -51,7 +51,7 @@ img {
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: var(--header-h2-font);
   font-weight: 600;
   color: var(--text-color-primary);
   text-transform: uppercase;

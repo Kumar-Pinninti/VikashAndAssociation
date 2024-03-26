@@ -112,10 +112,15 @@ header.sticky {
 }
 
 .video-wrapper {
-  width: 100px;
   position: absolute;
   top: 80px;
-  left: 100px;
+  left: 6%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-box {
+  width: 100px;
   text-align: center;
 }
 
@@ -143,13 +148,44 @@ header.sticky {
 
 .client-reviews-wrapper {
   background: var(--background-color);
-  padding: 60px 45px;
+  padding: 50px 35px;
   width: 450px;
   height: 650px;
-  position: absolute;
+  /* position: absolute;
   top: 80px;
-  right: 150px;
+  right: 150px; */
   z-index: 1;
+  overflow: hidden;
+}
+
+.client-heading {
+  color: var(--text-color-primary);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.client-quote {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.client-reviewer {
+  color: var(--special-color);
+  text-align: right;
+}
+
+.view-more-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .client-wrapper {
@@ -213,4 +249,21 @@ h6 {
 .social-icon a:hover {
   background-color: var(--special-color);
   color: var(--background-color-2);
+}
+
+@media screen and (max-width: 650px) {
+  .image-wrapper {
+    height: 1150px;
+  }
+
+  .video-wrapper {
+    top: 5%;
+    left: 1%;
+    flex-direction: column;
+  }
+
+  .client-reviews-wrapper {
+    max-width: fit-content;
+    height: fit-content;
+  }
 }
