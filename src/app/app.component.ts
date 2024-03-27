@@ -1,12 +1,51 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'vikashAndAssociation';
+
+  // random client icons
+  icons = [
+    { class: 'fas fa-archway' },
+    { class: 'fas fa-university' },
+    { class: 'fas fa-store' },
+    { class: 'fas fa-hotel' },
+    { class: 'fas fa-hospital' }
+  ];
+
+  ngOnInit(): void {
+    setInterval(() => {
+      this.shuffleIcons();
+    }, 5000); // Change icons' position every 3 seconds
+  }
+
+  shuffleIcons() {
+    this.icons = this.shuffleArray(this.icons);
+  }
+
+  shuffleArray(array: any[]): any[] {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  
 
   // sticky scroll script
   isSticky: boolean = false;

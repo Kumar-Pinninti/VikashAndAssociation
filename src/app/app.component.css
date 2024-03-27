@@ -150,7 +150,7 @@ header.sticky {
   background: var(--background-color);
   padding: 50px 35px;
   width: 450px;
-  height: 650px;
+  height: 670px;
   /* position: absolute;
   top: 80px;
   right: 150px; */
@@ -194,10 +194,25 @@ header.sticky {
   height: 150px;
   position: absolute;
   bottom: 0;
+}
+
+.client-images-wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 50px;
+  padding-left: 6%;
+  overflow: hidden;
+}
+
+.client-wrapper .client-images-wrapper i {
+  font-size: var(--header-font);
+  color: var(--special-color);
+}
+
+.client-wrapper .client-images-wrapper i:hover {
+  color: inherit;
 }
 
 /* footer styling */

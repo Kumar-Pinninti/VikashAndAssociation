@@ -43,7 +43,7 @@
 } */
 
 .section-card {
-  padding: 60px 30px;
+  padding: 40px 30px;
   margin-bottom: 30px;
   position: relative;
   /* width: 33.33%; */
@@ -57,7 +57,6 @@
   width: 100%;
   display: inline-block;
   position: relative;
-  margin-bottom: 5px;
 }
 
 .section-card .line:after {
@@ -75,39 +74,59 @@
   width: 100%;
 }
 
-.section-card img {
+/* .section-card img {
   width: 60px;
   margin-bottom: 20px;
-}
+} */
 
 span,
 a,
 a:hover {
-  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
 
-h5 {
+.service-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service-card-icon {
+  font-size: 50px;
+  color: var(--text-color-secondary);
+}
+
+.service-card-title {
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 15px;
   color: var(--text-color-primary);
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
+.service-card-para {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color-secondary);
+}
+
 .right-side-number {
   font-size: 40px;
   font-weight: 600;
-  position: absolute;
+  /* position: absolute;
   bottom: 20px;
-  right: 25px;
+  right: 25px; */
   color: transparent;
   -webkit-text-stroke: 1px var(--text-color-secondary);
   line-height: 1em;
+  text-align: right;
 }
 
 .section-card:hover .right-side-number {
   -webkit-text-stroke: 1px var(--special-color);
+}
+
+.section-card:hover .service-card-icon {
+  color: var(--special-color);
 }
