@@ -11,9 +11,11 @@
 
   --background-color: #0a182e;
   --background-color-2: #020d1c;
+  --background-color-3: rgb(10, 24, 46, 0.9);
 
-  /* --background-color: #272727;
-  --background-color-2: #323232; */
+  --background-color: #272727;
+  --background-color-2: #323232;
+  --background-color-3: rgb(39, 39, 39, 0.9);
 
   --text-color-primary: #ffffff;
   --text-color-secondary: #999;
