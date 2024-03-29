@@ -44,7 +44,7 @@ export class ContactUsComponent implements OnInit {
 
   // disable the send button until all fields are filled
   isFormValid(): boolean {
-    return !!this.name && !!this.email && !!this.subject && !!this.message;
+    return !!this.name && !!this.email && !!this.subject && !!this.message && this.isValidEmail();
   }
 
 
