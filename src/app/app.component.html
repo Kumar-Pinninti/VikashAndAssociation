@@ -44,21 +44,17 @@
           <q>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
             corporis ipsam error ad nam qui quas eius fugit voluptatem adipisci.
-            Eligendi pariatur eveniet at fugit autem maxime quaerat ipsam
-            si.
+            Eligendi pariatur eveniet at fugit autem maxime quaerat ipsam si.
           </q>
         </p>
         <p class="client-quote">
           <q>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
             corporis ipsam error ad nam qui quas eius fugit voluptatem adipisci.
-            Eligendi pariatur eveniet at fugit autem maxime quaerat ipsam
-            si.
+            Eligendi pariatur eveniet at fugit autem maxime quaerat ipsam si.
           </q>
         </p>
-        <p class="client-reviewer">
-          - some client
-        </p>
+        <p class="client-reviewer">- some client</p>
         <div class="view-more-wrapper">
           <a href="#">View more</a> <i class="fa fa-arrow-right"></i>
         </div>
@@ -127,3 +123,14 @@
     </div>
   </div>
 </footer>
+
+<!-- scroll to top -->
+
+<div
+  class="progress-container"
+  *ngIf="scrollYPos > 100"
+  [style.background]="gradient"
+  (click)="scrollToTop()"
+>
+  <i class="fas fa-chevron-up scroll-btn-icon"></i>
+</div>

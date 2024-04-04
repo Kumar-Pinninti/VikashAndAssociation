@@ -266,6 +266,35 @@ h6 {
   color: var(--background-color-2);
 }
 
+/* scroll to top  */
+
+.progress-container {
+  background-color: var(--special-color);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 55px;
+  width: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-btn-icon {
+  background-color: var(--background-color);
+  color: var(--special-color);
+  width: calc(100% - 7px);
+  height: calc(100% - 7px);
+  border-radius: 100%;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+
+/* media queries */
+
 @media screen and (max-width: 650px) {
   .image-wrapper {
     height: 1150px;

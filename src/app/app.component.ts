@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
     { class: 'fas fa-university' },
     { class: 'fas fa-store' },
     { class: 'fas fa-hotel' },
-    { class: 'fas fa-hospital' }
+    { class: 'fas fa-hospital' },
   ];
 
   ngOnInit(): void {
     setInterval(() => {
       this.shuffleIcons();
-    }, 5000); // Change icons' position every 3 seconds
+    }, 5000); // Change icons' position every few seconds
   }
 
   shuffleIcons() {
@@ -28,7 +28,9 @@ export class AppComponent implements OnInit {
   }
 
   shuffleArray(array: any[]): any[] {
-    let currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -45,14 +47,30 @@ export class AppComponent implements OnInit {
     return array;
   }
 
-  
-
   // sticky scroll script
   isSticky: boolean = false;
+  scrollYPos: number = 0;
+  scrollProgress: number = 0;
+  gradient: string = '';
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: any) {
     this.isSticky = window.pageYOffset > 300;
+
+    this.scrollYPos =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    this.scrollProgress =
+      (this.scrollYPos / (documentHeight - windowHeight)) * 100;
+    this.gradient = `conic-gradient(#b19777 ${this.scrollProgress}%, #999999 ${this.scrollProgress}%)`;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // side panel script

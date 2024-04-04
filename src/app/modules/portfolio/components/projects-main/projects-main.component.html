@@ -1,0 +1,51 @@
+<section>
+  <div class="container-background-image"></div>
+
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-title">
+        our
+        <span class="span-text-color">projects</span>
+      </h2>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-sm-12">
+        <ul class="portfolio-sort-group">
+          <li
+            class="portfolio-sort-item"
+            (click)="filterProjects('All')"
+            [ngClass]="{ active: activeCategory === 'All' }"
+          >
+            All Projects
+          </li>
+          <li
+            class="portfolio-sort-item"
+            *ngFor="let category of categories"
+            (click)="filterProjects(category)"
+            [ngClass]="{ active: activeCategory === category }"
+          >
+            {{ category }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="portfolio-gallery">
+          <div class="project-image">
+            <img [src]="project.imageUrl" [alt]="project.title" />
+            <div class="project-content">
+              <h5>{{ project.name }}</h5>
+              <div class="line"></div>
+              <div class="redirecting-arrow">
+                <i class="fas fa-arrow-right" [routerLink]="[project.id]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
