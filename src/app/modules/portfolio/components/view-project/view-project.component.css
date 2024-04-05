@@ -82,8 +82,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--text-color-secondary);
+  border-bottom: 1px solid var(--text-color-secondary);
 }
 
-.portfolio-arrows:hover {
+.portfolio-arrows span:hover {
   color: var(--special-color);
 }

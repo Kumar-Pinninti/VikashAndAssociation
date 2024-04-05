@@ -1,0 +1,37 @@
+/* about us */
+/* .about-container {
+  display: flex;
+  gap: 10px;
+}
+
+.about-content {
+  width: 50%;
+} */
+
+.about-image {
+  /* width: 50%; */
+  height: 250px;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(0.95);
+}
+
+.about-image-toast {
+  background: var(--background-color-2);
+  color: var(--text-color-primary);
+  height: fit-content;
+  width: 250px;
+  position: absolute;
+  bottom: -50px;
+  right: 30px;
+  padding: 20px 15px;
+}
+/* about us  ends*/

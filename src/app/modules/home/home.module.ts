@@ -7,6 +7,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { HomeComponent } from './home.component';
 import { OurProjectsComponent } from './components/our-projects/our-projects.component';
 import { OurBlogsComponent } from './components/our-blogs/our-blogs.component';
+import { AboutModule } from '../about/about.module';
 
 
 
@@ -20,7 +21,8 @@ import { OurBlogsComponent } from './components/our-blogs/our-blogs.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    AboutModule
   ]
 })
 export class HomeModule { }

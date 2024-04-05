@@ -83,6 +83,7 @@ export class AppComponent implements OnInit {
     { name: 'blogs', route: '/blogs' },
     { name: 'Contact', route: '/contact' },
     { name: 'Portfolio', route: '/portfolio' },
+    { name: 'testimonials', route: '/testimonials' },
   ];
 
   toggleSideNav() {

@@ -40,6 +40,14 @@ const routes: Routes = [
       );
     },
   },
+  {
+    path: 'testimonials',
+    loadChildren: () => {
+      return import('./modules/testimonials/testimonials.module').then(
+        (mod) => mod.TestimonialsModule
+      );
+    },
+  },
 ];
 
 @NgModule({
