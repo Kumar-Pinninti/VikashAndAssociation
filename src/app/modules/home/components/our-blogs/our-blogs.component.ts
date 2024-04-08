@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OurBlogsComponent implements OnInit {
   blogsList = [
     {
-      title: 'Title 1',
+      title: 'Title 1 ada dja daiu iadai fiuaf faiufaf hf gf auihfahf  fafafg ff7wefwef wfwefw fwefwef',
       date: 'Mar 20, 2024',
       imageUrl: 'https://wallpapercave.com/wp/wp2003540.jpg',
     },

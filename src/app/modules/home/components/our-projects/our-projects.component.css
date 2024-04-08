@@ -98,3 +98,10 @@
 .project-carousel-dot.active {
   background: var(--text-color-primary);
 }
+
+
+@media screen and (max-width: 600px) {
+  .project-image:nth-child(2) {
+    display: none;
+  }
+}

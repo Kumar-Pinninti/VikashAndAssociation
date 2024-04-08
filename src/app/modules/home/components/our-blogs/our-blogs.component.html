@@ -11,8 +11,8 @@
       <div class="our-blogs-image" *ngFor="let blogs of blogsList">
         <img [src]="blogs.imageUrl" [alt]="blogs.title" />
         <div class="our-blogs-content">
-          <h6>Blog - {{ blogs.date }}</h6>
-          <h5>{{ blogs.title }}</h5>
+          <h6 class="our-blogs-date">Blog - {{ blogs.date }}</h6>
+          <h5 class="our-blogs-title text-truncate">{{ blogs.title }}</h5>
         </div>
       </div>
     </div>

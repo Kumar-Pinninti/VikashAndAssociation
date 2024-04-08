@@ -28,10 +28,114 @@ section .container .row > * {
   );
 }
 
+/* motto card */
+
+.about-motto-card {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  place-items: center;
+}
+
+.about-motto-image {
+  width: 80px;
+  height: 80px;
+  font-size: 60px;
+  line-height: 85px;
+  border-radius: 50%;
+  color: var(--special-color);
+  border: 1px dashed var(--text-color-secondary);
+  margin-bottom: 30px;
+  display: grid;
+  place-items: center;
+}
+
+.img-thought:before {
+  content: "\e606";
+}
+
+.img-direction-alt:before {
+  content: "\e606";
+}
+
+.img-ruler-pencil:before {
+  content: "\e606";
+}
+
+.about-motto-body {
+  background: var(--background-color-2);
+  padding: 40px 20px 20px;
+  border-radius: 15px;
+}
+
+.about-motto-body:hover {
+  background: var(--special-color);
+}
+
+.about-motto-body .line {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.about-motto-body .line:after {
+  content: "";
+  background: var(--text-color-primary);
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transition: all 1s ease-in-out;
+}
+
+.about-motto-card:hover .line:after {
+  width: 100%;
+}
+
+.about-motto-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-motto-title {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.about-motto-para {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color-secondary);
+}
+
+.right-side-number {
+  font-size: 40px;
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-color-secondary);
+  line-height: 1em;
+  text-align: right;
+}
+
+.about-motto-body:hover .right-side-number {
+  -webkit-text-stroke: 1px var(--text-color-primary);
+}
+
+.about-motto-body:hover .about-motto-para {
+  color: var(--text-color-primary);
+}
+
+/* principle image */
+
 .principle-image {
   width: 100%;
   height: 500px;
-  background-color: red;
   position: relative;
 }
 
@@ -71,7 +175,6 @@ section .container .row > * {
 .teammate-card {
   display: flex;
   flex-direction: column;
-  background-color: red;
   height: 500px;
   overflow: hidden;
   position: relative;

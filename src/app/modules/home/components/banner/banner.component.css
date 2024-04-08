@@ -178,7 +178,7 @@
   margin-right: 5px;
 }
 
-@media screen and (max-width: 973px) {
+@media screen and (max-width: 1033px) {
   .left-side-logo {
     display: none;
   }
