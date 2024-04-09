@@ -21,6 +21,7 @@
 }
 
 .about-image img:hover {
+  transition: all 1s ease;
   transform: scale(0.95);
 }
 

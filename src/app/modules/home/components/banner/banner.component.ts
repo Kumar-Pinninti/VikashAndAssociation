@@ -21,12 +21,14 @@ export class BannerComponent implements OnInit, AfterViewInit {
       description:
         'Eos, blanditiis nesciunt ab maxime dolorum optio quia vitae ratione. Itaque nesciunt vitae illo dolorum officia ipsum enim quia quas blanditiis nulla.',
       buttonText: 'Know More',
+      redirectLink: '/portfolio',
     },
     {
       image: 'https://wallpapercave.com/wp/wp2752752.jpg',
       title: 'Design, Built and Live',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       buttonText: 'Know More',
+      redirectLink: '/portfolio/3',
     },
     // Add more items as needed
   ];

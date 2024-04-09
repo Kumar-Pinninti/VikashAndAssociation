@@ -138,63 +138,20 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let team of teamsList">
         <div class="teammate-card">
           <div class="teammate-image">
-            <img
-              src="https://wallpapercave.com/wp/wp6621241.jpg"
-              alt="teammate-image"
-            />
+            <img [src]="team.imageUrl" alt="{{ team.name }}-image" />
           </div>
           <div class="teammate-name">
-            <h6>Vikash</h6>
+            <h6>{{ team.name }}</h6>
           </div>
-          <div class="teammate-designation">associate</div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="teammate-card">
-          <div class="teammate-image">
-            <img
-              src="https://wallpapercave.com/wp/wp6621241.jpg"
-              alt="teammate-image"
-            />
+          <div class="teammate-designation">
+            <div>
+              {{ team.designation }}
+            </div>
+            <i class="far fa-eye" [routerLink]="[team.memberId]"></i>
           </div>
-          <div class="teammate-name">
-            <h6>Vikash</h6>
-          </div>
-          <div class="teammate-designation">associate</div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="teammate-card">
-          <div class="teammate-image">
-            <img
-              src="https://wallpapercave.com/wp/wp6621241.jpg"
-              alt="teammate-image"
-            />
-          </div>
-          <div class="teammate-name">
-            <h6>Vikash</h6>
-          </div>
-          <div class="teammate-designation">associate</div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="teammate-card">
-          <div class="teammate-image">
-            <img
-              src="https://wallpapercave.com/wp/wp6621241.jpg"
-              alt="teammate-image"
-            />
-          </div>
-          <div class="teammate-name">
-            <h6>Vikash</h6>
-          </div>
-          <div class="teammate-designation">associate</div>
         </div>
       </div>
     </div>

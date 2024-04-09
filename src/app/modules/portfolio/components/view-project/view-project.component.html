@@ -4,81 +4,64 @@
     [style.backgroundImage]="'url(' + project.imageUrl + ')'"
   ></div>
 
-  <div class="container">
-    <h2 class="project-name">{{ project.name }}</h2>
-    <div class="row">
-      <div class="col-md-8">
-        <p class="project-description">{{ project.description }}</p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          vitae sunt repudiandae similique? Ullam voluptatem fugiat quod,
-          molestias voluptatum labore nobis in a excepturi sed id saepe officia?
-          Praesentium, quisquam!
-        </p>
-      </div>
-      <div class="col-md-4">
-        <div class="project-properties">
-          <span>Principal Architect : </span>
-          <span>vikask</span>
+  <section>
+    <div class="container">
+      <h2 class="project-name">{{ project.name }}</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <p
+            class="project-description"
+            *ngFor="let description of project.description"
+          >
+            {{ description }}
+          </p>
         </div>
-        <div class="project-properties">
-          <span>Associate Architect : </span>
-          <span>vikask</span>
-        </div>
-        <div class="project-properties">
-          <span>Year : </span>
-          <span>2023</span>
-        </div>
-        <div class="project-properties">
-          <span>Company: </span>
-          <span>vikaskh & Co.</span>
-        </div>
-
-        <div class="video-box">
-          <div class="video-icon">
-            <i class="fas fa-play"></i>
+        <div class="col-md-4">
+          <div class="project-properties">
+            <span>Principal Architect : </span>
+            <span>vikask</span>
           </div>
-          <div class="video-text">View Video - {{ project.name }}</div>
+          <div class="project-properties">
+            <span>Associate Architect : </span>
+            <span>vikask</span>
+          </div>
+          <div class="project-properties">
+            <span>Year : </span>
+            <span>2023</span>
+          </div>
+          <div class="project-properties">
+            <span>Company: </span>
+            <span>vikaskh & Co.</span>
+          </div>
+
+          <div class="video-box">
+            <div class="video-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="video-text">View Video - {{ project.name }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" *ngFor="let picture of project.imageGallery">
+          <div class="gallery-box">
+            <img class="image-gallery" [src]="picture" alt="image-gallery" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 portfolio-arrows">
+          <span (click)="goToPreviousProject()" *ngIf="project.id !== 1"
+            ><i class="fas fa-arrow-left"></i> Previous Project</span
+          >
+          <span (click)="goToPortfolioPage()">Back To Portfolio</span>
+          <span (click)="goToNextProject()" *ngIf="project.id !== totalProjects"
+            >Next Project <i class="fas fa-arrow-right"></i>
+          </span>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-12 portfolio-arrows">
-        <span (click)="goToPreviousProject()" *ngIf="project.id  !== 1"><i class="fas fa-arrow-left"></i> Previous Project</span>
-        <span (click)="goToPortfolioPage()">Back To Portfolio</span>
-        <span (click)="goToNextProject()" *ngIf="project.id  !== totalProjects">Next Project <i class="fas fa-arrow-right"></i> </span>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>

@@ -21,7 +21,7 @@
             <h1 class="carousel-title">{{ item.title }}</h1>
             <p class="carousel-description">{{ item.description }}</p>
             <button class="btn-hover btn-hover-effect">
-              <a href="#">
+              <a [routerLink]="[item.redirectLink]">
                 <span>
                   {{ item.buttonText }}
                 </span>

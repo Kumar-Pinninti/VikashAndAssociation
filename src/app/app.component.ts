@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,15 @@ export class AppComponent implements OnInit {
     { class: 'fas fa-hotel' },
     { class: 'fas fa-hospital' },
   ];
+
+  constructor(private router: Router) {
+    // this code reset scroll position of go to botton and render page from start point while navigating
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
 
   ngOnInit(): void {
     setInterval(() => {

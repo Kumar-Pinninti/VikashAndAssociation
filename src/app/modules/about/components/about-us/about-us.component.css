@@ -156,7 +156,7 @@ section .container .row > * {
 
 .principle-image:hover img {
   transition: all 1s ease;
-  transform: scale(1.05, 1.05);
+  transform: scale(0.95);
 }
 
 .principle-content {
@@ -202,8 +202,18 @@ section .container .row > * {
   position: absolute;
   bottom: -100px;
   transition: bottom 0.4s ease;
+  padding: 20px 0;
+  color: var(--text-color-secondary);
 }
 
 .teammate-card:hover .teammate-designation {
   bottom: 0;
+}
+
+.teammate-designation i {
+  color: var(--special-color);
+}
+
+.teammate-designation i:hover {
+  color: var(--text-color-primary);
 }
