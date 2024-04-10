@@ -1,0 +1,40 @@
+<section>
+    <div
+    class="container-background-image"
+    [style.backgroundImage]="'url(' + singleBlog.blogImageUrl + ')'"
+  ></div>
+
+  <div class="container blog-view-container">
+    <h2 class="blog-view-title">{{ singleBlog.blogTitle }}</h2>
+    <p>
+      UPLOADED ON : {{ singleBlog.blogDate | uppercase }}, AUTHOR --
+      {{ singleBlog.blogAuthor | uppercase }}
+    </p>
+    <p *ngFor="let blogDesc of singleBlog.blogDescription">{{ blogDesc }}</p>
+
+    <div class="row">
+      <div class="col-12">
+        <img
+          [src]="singleBlog.blogImageUrl"
+          alt="{{ singleBlog.blogTitle }}-image"
+        />
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let obj of singleBlog.blogAddMore">
+      <div class="col-md-12">
+        <div class="blog-view-subheading">
+          {{ obj.blogSubheading }}
+        </div>
+      </div>
+
+      <div class="col-md-12" *ngFor="let desc of obj.blogSubDescription">
+        <p>{{ desc }}</p>
+      </div>
+
+      <div class="col-md-6" *ngFor="let img of obj.blogSubGallery">
+        <img [src]="img" alt="blog-image" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,113 @@
+.container-background-image {
+  background: url("https://wallpapercave.com/wp/wp2752807.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 50vh;
+  z-index: -20;
+  position: relative;
+}
+
+.container-background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    var(--background-color-3),
+    var(--background-color)
+  );
+}
+
+.blogs-gallery-image {
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.blogs-gallery-image:hover img {
+  transition: all 0.4s ease-in;
+  transform: scale(1.09);
+}
+
+.blogs-gallery-date-content {
+  padding: 30px 8%;
+}
+
+.blogs-gallery-date-content .blogs-gallery-date {
+  display: table-cell;
+  position: relative;
+  width: 80px;
+  z-index: 2;
+}
+
+.blogs-gallery-date h3 {
+  color: var(--special-color);
+  font-weight: 500;
+  font-size: 65px;
+}
+
+.blogs-gallery-date h6 {
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.blogs-gallery-date-content .blogs-gallery-content {
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 15px;
+}
+
+.blogs-gallery-content h6 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--special-color);
+}
+
+.blogs-gallery-content h4 {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--text-color-primary);
+}
+
+.blogs-gallery-read-more {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding-left: 40px;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--special-color);
+}
+
+.blogs-gallery-read-more:hover {
+  color: var(--text-color-primary);
+}
+
+.blogs-gallery-read-more::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #b19777;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+
+@media screen and (min-width: 767px) {
+  .blogs-gallery-wrapper:nth-child(odd) .col-md-6:nth-child(2) {
+    order: -1;
+  }
+}
