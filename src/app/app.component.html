@@ -28,10 +28,25 @@
 
 <router-outlet></router-outlet>
 
+<div *ngIf="showModal">
+  <div class="video-modal-overlay" (click)="closeModal()"></div>
+  <div class="video-modal">
+    <i class="fas fa-times video-close-button" (click)="closeModal()"></i>
+    <iframe
+      src="https://www.youtube.com/embed/O6o5AtU2p10"
+      title="Complete Guide to UI Animation and Tools in UNDER 10 minutes!"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
 <section class="parallel-image-container">
   <div class="image-wrapper">
     <div class="container video-wrapper">
-      <div class="video-box">
+      <div class="video-box" (click)="toggleModal()">
         <div class="video-icon">
           <i class="fas fa-play"></i>
         </div>
@@ -56,7 +71,8 @@
         </p>
         <p class="client-reviewer">- some client</p>
         <div class="view-more-wrapper">
-          <a routerLink="testimonials">View more</a> <i class="fa fa-arrow-right"></i>
+          <a routerLink="testimonials">View more</a>
+          <i class="fa fa-arrow-right"></i>
         </div>
       </div>
     </div>

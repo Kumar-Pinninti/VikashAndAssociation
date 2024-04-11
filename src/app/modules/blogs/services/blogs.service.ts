@@ -9,7 +9,7 @@ export class BlogsService {
       blogId: 1,
       blogTitle: 'BLOG NAME SFHSFHFF FGAF FGFHAF AFGFFGSFFGFA FGYGAF AFAG',
       blogAuthor: 'viskash',
-      blogDate: '25 march 2024',
+      blogDate: '31 march 2024',
       blogTags: ['Architecture', 'modern buildings'],
       blogImageUrl: 'https://wallpapercave.com/wp/wp2752807.jpg',
       blogDescription: [
@@ -47,7 +47,61 @@ export class BlogsService {
       blogId: 2,
       blogTitle: 'BLOG NAME SFHSFHFF FGAF FGFHAF AFGFFGSFFGFA FGYGAF AFAG',
       blogAuthor: 'viskash',
-      blogDate: '25 march 2024',
+      blogDate: '30 march 2024',
+      blogTags: ['Architecture', 'modern buildings'],
+      blogImageUrl: 'https://wallpapercave.com/wp/wp2752807.jpg',
+      blogDescription: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+      ],
+      blogAddMore: [
+        {
+          blogSubheading: 'adhyadyagdyagd',
+          blogSubDescription: [
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+          ],
+          blogSubGallery: [
+            'https://wallpapercave.com/wp/wp6621241.jpg',
+            'https://wallpapercave.com/wp/wp6621241.jpg',
+          ],
+        },
+      ],
+    },
+    {
+      blogId: 2,
+      blogTitle: 'BLOG NAME SFHSFHFF FGAF FGFHAF AFGFFGSFFGFA FGYGAF AFAG',
+      blogAuthor: 'viskash',
+      blogDate: '28 march 2024',
+      blogTags: ['Architecture', 'modern buildings'],
+      blogImageUrl: 'https://wallpapercave.com/wp/wp2752807.jpg',
+      blogDescription: [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+      ],
+      blogAddMore: [
+        {
+          blogSubheading: 'adhyadyagdyagd',
+          blogSubDescription: [
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit Officiis vitae sunt repudiandae similique Ullam voluptatem fugiat quod, molestias voluptatum labore nobis in a excepturi sed id saepe officia Praesentium, quisquam',
+          ],
+          blogSubGallery: [
+            'https://wallpapercave.com/wp/wp6621241.jpg',
+            'https://wallpapercave.com/wp/wp6621241.jpg',
+          ],
+        },
+      ],
+    },
+    {
+      blogId: 4,
+      blogTitle: 'BLOG NAME SFHSFHFF FGAF FGFHAF AFGFFGSFFGFA FGYGAF AFAG',
+      blogAuthor: 'viskash',
+      blogDate: '27 march 2024',
       blogTags: ['Architecture', 'modern buildings'],
       blogImageUrl: 'https://wallpapercave.com/wp/wp2752807.jpg',
       blogDescription: [

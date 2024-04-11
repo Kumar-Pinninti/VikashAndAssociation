@@ -103,4 +103,15 @@ export class AppComponent implements OnInit {
   closeSideNav() {
     this.isSideNavOpen = false;
   }
+
+  // modal pop up for video
+  showModal: boolean = false;
+
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
 }

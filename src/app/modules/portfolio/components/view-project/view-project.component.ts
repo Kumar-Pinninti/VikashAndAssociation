@@ -33,7 +33,7 @@ export class ViewProjectComponent implements OnInit {
       this.router.navigate(['/portfolio/', project.id]);
     }
   }
-  
+
   goToPortfolioPage() {
     this.router.navigate(['/portfolio']);
   }
@@ -44,5 +44,16 @@ export class ViewProjectComponent implements OnInit {
 
   goToNextProject() {
     this.navigateToProject(this.projectId + 1);
+  }
+
+  // modal pop up
+  showModal: boolean = false;
+
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }

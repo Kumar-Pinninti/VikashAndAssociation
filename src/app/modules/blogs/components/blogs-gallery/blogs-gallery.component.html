@@ -9,13 +9,13 @@
       </h2>
     </div>
 
-    <div class="row mb-4 blogs-gallery-wrapper" *ngFor="let blog of blogsList">
-      <div class="col-md-6">
+    <div class="row mb-4 blogs-gallery-wrapper" *ngFor="let blog of blogsList" #blogRow>
+      <div class="col-md-6 fade-in-left">
         <div class="blogs-gallery-image">
           <img [src]="blog.blogImageUrl" alt="{{ blog.blogTitle }}-image" />
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 fade-in-right">
         <div class="blogs-gallery-date-content">
           <div class="blogs-gallery-date">
             <h6>{{ blog.blogDate.split(" ")[1] }}</h6>

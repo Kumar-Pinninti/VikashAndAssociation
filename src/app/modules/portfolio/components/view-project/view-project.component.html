@@ -34,7 +34,7 @@
             <span>vikaskh & Co.</span>
           </div>
 
-          <div class="video-box">
+          <div class="video-box" (click)="toggleModal()">
             <div class="video-icon">
               <i class="fas fa-play"></i>
             </div>
@@ -64,4 +64,19 @@
       </div>
     </div>
   </section>
+</div>
+
+<div *ngIf="showModal">
+  <div class="video-modal-overlay" (click)="closeModal()"></div>
+  <div class="video-modal">
+    <i class="fas fa-times video-close-button" (click)="closeModal()"></i>
+    <iframe
+      src="https://youtube.com/embed/NcF21EhtAWE"
+      title="Complete Guide to UI Animation and Tools in UNDER 10 minutes!"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
