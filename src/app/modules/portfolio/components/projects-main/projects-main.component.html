@@ -32,7 +32,10 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4" *ngFor="let project of projects">
+      <div
+        class="col-md-4 image-shrink"
+        *ngFor="let project of projects"
+      >
         <div class="portfolio-gallery">
           <div class="project-image">
             <img [src]="project.imageUrl" [alt]="project.title" />

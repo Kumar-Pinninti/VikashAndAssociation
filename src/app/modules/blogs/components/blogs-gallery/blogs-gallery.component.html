@@ -9,7 +9,34 @@
       </h2>
     </div>
 
-    <div class="row mb-4 blogs-gallery-wrapper" *ngFor="let blog of blogsList" #blogRow>
+    <div class="row mb-4 blogs-gallery-wrapper" *ngFor="let blog of blogsList">
+      <div class="col-md-6 fade-in-left" appDirScrollAnimation>
+        <div class="blogs-gallery-image">
+          <img [src]="blog.blogImageUrl" alt="{{ blog.blogTitle }}-image" />
+        </div>
+      </div>
+      <div class="col-md-6 fade-in-right" appDirScrollAnimation>
+        <div class="blogs-gallery-date-content">
+          <div class="blogs-gallery-date">
+            <h6>{{ blog.blogDate.split(" ")[1] }}</h6>
+            <h3>{{ blog.blogDate.split(" ")[0] }}</h3>
+            <h6>{{ blog.blogDate.split(" ")[2] }}</h6>
+          </div>
+          <div class="blogs-gallery-content">
+            <h6>Blog / {{ blog.blogTags }}</h6>
+            <h4>{{ blog.blogTitle }}</h4>
+            <div
+              class="blogs-gallery-read-more"
+              [routerLink]="['blogs', blog.blogId]"
+            >
+              Read More
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row mb-4 blogs-gallery-wrapper" *ngFor="let blog of blogsList" #blogRow>
       <div class="col-md-6 fade-in-left">
         <div class="blogs-gallery-image">
           <img [src]="blog.blogImageUrl" alt="{{ blog.blogTitle }}-image" />
@@ -34,6 +61,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>

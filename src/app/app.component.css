@@ -180,12 +180,32 @@ header.sticky {
 .client-reviewer {
   color: var(--special-color);
   text-align: right;
+  margin-bottom: 15px;
 }
 
 .view-more-wrapper {
+  border-top: 1px solid var(--text-color-primary);
+  padding-top: 5%;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.view-more-wrapper a {
+  text-decoration: none;
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+}
+
+.view-more-wrapper:hover a:hover {
+  color: var(--special-color);
+  border-bottom: 1px solid var(--special-color);
+}
+
+.view-more-wrapper:hover i {
+  color: var(--special-color);
+  transition: all 1s ease-in-out;
+  font-size: 25px;
 }
 
 .client-wrapper {

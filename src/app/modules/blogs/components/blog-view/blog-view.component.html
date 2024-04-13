@@ -1,5 +1,5 @@
 <section>
-    <div
+  <div
     class="container-background-image"
     [style.backgroundImage]="'url(' + singleBlog.blogImageUrl + ')'"
   ></div>
@@ -13,7 +13,7 @@
     <p *ngFor="let blogDesc of singleBlog.blogDescription">{{ blogDesc }}</p>
 
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 image-expand" appDirScrollAnimation>
         <img
           [src]="singleBlog.blogImageUrl"
           alt="{{ singleBlog.blogTitle }}-image"
@@ -32,7 +32,11 @@
         <p>{{ desc }}</p>
       </div>
 
-      <div class="col-md-6" *ngFor="let img of obj.blogSubGallery">
+      <div
+        class="col-md-6 image-expand"
+        *ngFor="let img of obj.blogSubGallery"
+        appDirScrollAnimation
+      >
         <img [src]="img" alt="blog-image" />
       </div>
     </div>

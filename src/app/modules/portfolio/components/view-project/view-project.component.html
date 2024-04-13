@@ -44,7 +44,11 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6" *ngFor="let picture of project.imageGallery">
+        <div
+          class="col-md-6 image-expand"
+          appDirScrollAnimation
+          *ngFor="let picture of project.imageGallery"
+        >
           <div class="gallery-box">
             <img class="image-gallery" [src]="picture" alt="image-gallery" />
           </div>
